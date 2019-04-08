@@ -286,7 +286,7 @@ func (mt *MigrationTable) validate() {
 	}
 
 	if len(mt.columns) == 0 && mt.command != MC_DROP {
-		panic("no columns on alter table migration")
+		panic("no columns on create or alter table migration")
 	}
 
 	for _, column := range mt.columns {
